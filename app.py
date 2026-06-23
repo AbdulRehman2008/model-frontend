@@ -15,7 +15,7 @@ if st.button("Predict"):
         st.warning("Please write a review first.")
     else:
         # Send request to FastAPI
-        response = requests.post("http://localhost:8000/predict", json={"text": review})
+      response = requests.post("https://movie-model-backend-production.up.railway.app/predict", json={"text": review})
         result = response.json()
 
         sentiment = result["sentiment"]
